@@ -1,4 +1,4 @@
 FROM    nginx
 LABEL   Tool="Docker" \
         Name="sai"
-EXPOSE  80
+EXPOSE  8080
