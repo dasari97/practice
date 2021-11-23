@@ -1,5 +1,4 @@
 FROM    nginx
 LABEL   Tool="Docker" \
         Name="sai"
-CMD     [ "ping", "-c2", "google.com" ]
 EXPOSE  80
