@@ -19,3 +19,4 @@
   copy:
     src: sample.html
     dest: /usr/share/nginx/html/
+  become: yes
