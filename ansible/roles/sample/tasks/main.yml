@@ -18,5 +18,5 @@
 - name: Copying HTML file
   copy:
     src: sample.html
-    dest: /usr/share/nginx/html/
+    dest: /usr/share/nginx/html
   become: yes
