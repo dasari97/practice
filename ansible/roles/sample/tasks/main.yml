@@ -8,3 +8,19 @@
    name: nginx
    state: started
    enabled: true
+ 
+- name: deleting old contect
+  file:
+    path: /tmp/filebeat
+    state: absent
+  ignore_errors: true
+
+- name: creating directory
+  file: 
+    dest: /tmp/filebeat
+    state: directory
+
+- name: Copying repo files
+  get_url:
+    url: "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.16.0-linux-x86_64.tar.gz"
+    dest: /tmp/filebeat
