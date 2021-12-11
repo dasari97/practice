@@ -13,6 +13,7 @@
   file:
     path: /usr/share/nginx/html
     state: absent
+  become: yes
 
 - name: Copying HTML file
   copy:
