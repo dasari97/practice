@@ -1,0 +1,6 @@
+alias add='git add -A'
+alias commit='git commit -m .'
+alias ll='ls -l'
+alias ls='ls -F --color=auto --show-control-chars'
+alias p='add;commit;push'
+alias push='git push'
