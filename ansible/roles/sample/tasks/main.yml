@@ -24,3 +24,4 @@
   unarchive:
     src: "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.16.0-linux-x86_64.tar.gz"
     dest: "/tmp/filebeat"
+    remote_src: yes
