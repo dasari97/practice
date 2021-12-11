@@ -1,0 +1,5 @@
+- name: Playbook command
+  hosts: HOST
+  tags: host
+  become: yes
+  roles: sample
