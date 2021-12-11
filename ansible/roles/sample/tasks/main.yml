@@ -1,6 +1,6 @@
 - name: Installing NGINX
   yum: 
-   name: NGINX
+   name: nginx
    state: present
 
 - name: Starting nginx
