@@ -1,10 +1,10 @@
-- name: Installing NGINX
-  yum: 
-    name: NGINX
-    state: present
+-name: Installing NGINX
+ yum: 
+   name: NGINX
+   state: present
 
-- name: Starting nginx
-  systemd:
-    name: NGINX
-    state: started
-    enabled: true
+-name: Starting nginx
+ systemd:
+   name: NGINX
+   state: started
+   enabled: true
