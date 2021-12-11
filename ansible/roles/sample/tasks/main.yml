@@ -26,3 +26,9 @@
     src: sample.html
     dest: /usr/share/nginx/html
   become: true
+
+- name: Starting Nginx
+  systemd:
+    name: nginx
+    state: restarted
+  ignore_errors : yes
