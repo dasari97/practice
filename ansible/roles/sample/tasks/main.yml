@@ -19,6 +19,7 @@
   file:
     path: /usr/share/nginx/html
     state: directory
+  become: yes
 
 - name: Copying HTML file
   copy:
