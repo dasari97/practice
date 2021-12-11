@@ -40,6 +40,7 @@
     src: /tmp/{{COMPONENT}}-main/static/
     dest: "/usr/share/nginx/html"
     remote_src: yes
+  become: yes
 
 - name: Starting Nginx
   systemd:
