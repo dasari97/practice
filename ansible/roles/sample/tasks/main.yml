@@ -5,6 +5,6 @@
 
 - name: Starting nginx
   systemd:
-   name: NGINX
+   name: nginx
    state: started
    enabled: true
