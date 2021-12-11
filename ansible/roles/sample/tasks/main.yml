@@ -11,17 +11,10 @@
  
 - name: deleting old contect
   file:
-    path: /tmp/filebeat
+    path: /usr/share/nginx/html
     state: absent
-  ignore_errors: true
 
-- name: creating directory
-  file: 
-    dest: /tmp/filebeat
-    state: directory
-
-- name: Copying repo files
-  unarchive:
-    src: "https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.16.0-linux-x86_64.tar.gz"
-    dest: "/tmp/filebeat"
-    remote_src: yes
+- name: Copying HTML file
+  copy:
+    src: sample
+    dest: /usr/share/nginx/html/
