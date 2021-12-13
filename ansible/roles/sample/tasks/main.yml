@@ -1,5 +1,5 @@
 - name: Downloading the repo file for Jenkins.
-  shell: 
+  shell: |
     curl -L -o /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
     rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
   become: yes
