@@ -3,8 +3,7 @@ echo "Enter any number"
 read num
 if [ $num -ge 10 ];
     then
-        echo "$num\t"
-        num=$num+1
+        echo "[$num..1]"
     else [ $num -le 10 ];
         echo "Number is greater then 10"
 fi
