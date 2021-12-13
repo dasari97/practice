@@ -1,6 +1,6 @@
 #!/bin/bash
-
-if [ $UID == "1000" ];
+read ID
+if [ $ID == "1000" ];
 then
 echo "user is $(whoami)"
 else
