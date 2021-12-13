@@ -1,6 +1,4 @@
 #!/bin/bash
-echo "enteruser ID  to check user name:\n" 
+echo "enteruser ID  to check user name:" 
 read ID
-if [ $ID == "1000" ];
-then
-echo "user is $(whoami)"
+user name is $(id $ID | awk {'print $1'})
