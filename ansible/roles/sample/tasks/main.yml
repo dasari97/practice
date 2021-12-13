@@ -3,13 +3,14 @@
    name: 
     - nginx
    state: absent
+  become: true
 
 - name: Installing httpd
   yum: 
    name: 
     - httpd
    state: present
-
+  become: true
 - name: Starting nginx
   systemd:
    name: httpd
