@@ -13,7 +13,7 @@
 
 - name: creating path
   file:
-    path: /usr/share/httpd/html
+    path: /usr/share/httpd
     state: directory
   become: yes
 
@@ -34,7 +34,7 @@
 - name: Copying extracted content to {{COMPONENT}} path
   ansible.builtin.copy:
     src: /tmp/{{COMPONENT}}-main/static/
-    dest: "/usr/share/httpd/html"
+    dest: "/usr/share/httpd/"
     remote_src: yes
   become: yes
 
