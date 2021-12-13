@@ -12,3 +12,10 @@
       - jenkins
     state: present
   become: yes
+
+- name: Starting jenkins
+  service: 
+    name: jenkins
+    state: started
+    enabled: true
+  become: true
