@@ -44,8 +44,8 @@
     remote_src: yes
   become: yes
 
-- name: Starting Nginx
-  systemd:
+- name: restarting Nginx
+  service:
     name: nginx
     state: restarted
   ignore_errors : yes
