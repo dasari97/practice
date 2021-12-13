@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cat << new.txt
+cat << new
 Hope eerything is going good
-new.txt 
+new 
