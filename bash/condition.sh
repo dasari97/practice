@@ -1,4 +1,9 @@
 #!/bin/bash
-echo "enteruser ID  to check user name:" 
-read ID
-echo "User name is $(id $ID | awk {'print $1'})"
+echo "Enter any number"
+read num
+if [ num <= 10 ]; then
+echo "$num\t"
+num=$num+1
+else if [ num >=10 ] then
+echo "Number is greater then 10"
+fi
