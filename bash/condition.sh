@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ $UID == "0" ];
+if [ $UID == "1000" ];
 then
-echo "user is root"
+echo "user is $(whoami)"
 else
-echo "user is not root"
+echo "user not found"
 fi
