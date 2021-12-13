@@ -6,9 +6,9 @@
 
 - name: Installing jenkins
   yum:
-   - name:
+    name:
       - epel-release
       - java-11-openjdk-devel
       - jenkins
-  state: present
-  become: yes
+    state: present
+    become: yes
