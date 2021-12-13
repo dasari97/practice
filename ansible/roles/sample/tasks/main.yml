@@ -5,10 +5,10 @@
   become: yes
 
 - name: Installing jenkins
-  yum: pkg={{item}}
-  with_items:
-  - "epel-release"
-  - "java-11-openjdk-devel"
-  - "jenkins"
+  yum:
+   - name:
+      - epel-release
+      - java-11-openjdk-devel
+      - jenkins
   state: present
   become: yes
