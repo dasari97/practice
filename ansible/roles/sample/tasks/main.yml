@@ -2,7 +2,7 @@
   yum: 
    name: 
     - httpd
-   state: present
+   state: latest
   become: true
  
 - name: deleting old contect
