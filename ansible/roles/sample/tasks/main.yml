@@ -47,5 +47,5 @@
 - name: restarting Nginx
   service:
     name: nginx
-    state: restarted
+    state: started
   ignore_errors : yes
