@@ -3,7 +3,7 @@
    name: 
     - nginx
     - wget
-   state: updated
+   state: latest
 
 - name: Starting nginx
   systemd:
