@@ -1,46 +1,14 @@
-- name: Installing httpd
-  yum: 
-   name: 
-    - httpd
-   state: latest
-  become: true
- 
-- name: deleting old contect
-  file:
-    path: /var/www/html
-    state: absent
+- name: Downloading the repo file for Jenkins.
+  shell: 
+    wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
   become: yes
 
-- name: creating path
-  file:
-    path: /var/www/html
-    state: directory
-  become: yes
-
-- name: Downlaoding {{COMPONENT}} zip file
-  ansible.builtin.unarchive:
-    src: "https://github.com/roboshop-devops-project/{{COMPONENT}}/archive/main.zip"
-    dest: /tmp
-    remote_src: yes
-
-- name: Copying extracted content to {{COMPONENT}} path
-  ansible.builtin.copy:
-    src: /tmp/{{COMPONENT}}-main/
-    dest: /home/centos/{{COMPONENT}}/
-    remote_src: yes
-    owner: centos
-    group: centos
-
-- name: Copying extracted content to {{COMPONENT}} path
-  ansible.builtin.copy:
-    src: /tmp/{{COMPONENT}}-main/static/
-    dest: "/var/www/html"
-    remote_src: yes
-  become: yes
-
-- name: restarting httpd
-  service:
-    name: httpd
-    state: started
-  ignore_errors : yes
+- name: Installing jenkins
+  yum: {{items}}
+  with_items:
+    - epel-release
+    - java-11-openjdk-devel
+    - jenkins
+  state: present
   become: yes
