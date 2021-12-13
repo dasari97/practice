@@ -1,7 +1,9 @@
 - name: Installing NGINX
   yum: 
-   name: nginx
-   state: present
+   name: 
+    - nginx
+    - wget
+   state: updated
 
 - name: Starting nginx
   systemd:
