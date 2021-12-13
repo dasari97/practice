@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Enter any number"
 read num
-if [ num <= 10 ]; then
+if [ num -ge 10 ]; then
 echo "$num\t"
 num=$num+1
-else [ num >=10 ] then
+else [ num -le 10 ]; then
 echo "Number is greater then 10"
 fi
