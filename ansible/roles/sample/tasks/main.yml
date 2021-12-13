@@ -6,10 +6,10 @@
 
 - name: Installing jenkins
   yum: 
-    - name: {{item}}
+  - name: {{item}}
   with_items:
-    - epel-release
-    - java-11-openjdk-devel
-    - jenkins
+    - "epel-release"
+    - "java-11-openjdk-devel"
+    - "jenkins"
   state: present
   become: yes
