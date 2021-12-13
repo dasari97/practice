@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [ $UID =! "0" ];
+if [ $UID == "0" ];
 then
-echo "user is not root"
-else
 echo "user is root"
+else
+echo "user is not root"
 fi
