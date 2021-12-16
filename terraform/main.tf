@@ -23,6 +23,7 @@ resource "aws_instance" "myinstance" {
 resource "aws_security_group" "my-sg" {
   name        = "terraform"
   description = "Allow TLS inbound traffic"
+  vpc_id = "vpc-046a61acc4b3c52bb"
 
   ingress {
     description      = "http"
@@ -61,7 +62,9 @@ resource "aws_security_group" "my-sg" {
   }
 }
 
-variable "password" {}
+variable "password" {
+    default = null
+}
 
 resource "null_resource" "nginx" {
 
@@ -69,16 +72,18 @@ resource "null_resource" "nginx" {
         a = timestamp()
     }
 provisioner "remote-exec" {
-    connection  {
-            type    = "ssh"
-            host    = aws_instance.myinstance.id
-            user = "centos"
-            password   = var.password
-        }
-    inline = [
-        "sudo yum install nginx -y"
-    ]
-
+    connection {
+      type     = "ssh"
+      user     = centos
+      password = var.password
+      host     = aws_instance.myinstance.id
     }
+    
+    inline = [
+      "sudo yum install python3-pip -y",
+      "sudo pip3 install pip --upgrade",
+      "sudo pip3 install ansible==4.1.0",
+    ]
+  }
 }
 
