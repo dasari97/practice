@@ -57,7 +57,7 @@ provisioner "remote-exec" {
     connection  {
             host    = aws_instance.myinstance.id
             user = "centos"
-            password    = vars.password
+            password   = ${vars.password}
         }
     inline = [
         "sudo yum install nginx -y"
