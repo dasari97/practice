@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
     backend  "s3" {
         bucket = "d1924"
-        key = "/terraform/workspace"
+        key = "Terraform/workspace"
         region  = "us-east-1"
     }
 }
