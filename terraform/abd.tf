@@ -4,3 +4,7 @@ variable "City" {
 variable "Street" {
     default = "AECS B Block"  
 }
+
+variable "House" {
+    default = null    
+}
