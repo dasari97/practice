@@ -1,0 +1,3 @@
+variable "City" {
+    default = "Bangalore"  
+}
