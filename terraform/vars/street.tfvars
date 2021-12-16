@@ -1,3 +1,5 @@
 variable "House" {
-    default = "#824"    
+    default = null    
 }
+
+House   = "#824"
