@@ -104,5 +104,5 @@ output "Street" {
 }
 
 output "House" {
-  value = "${vars.House}"
+  value = vars.House
 }
