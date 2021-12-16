@@ -61,9 +61,7 @@ resource "aws_security_group" "my-sg" {
   }
 }
 
-variable "password" {
-    default = null
-}
+variable "password" {}
 
 resource "null_resource" "nginx" {
 
@@ -72,6 +70,7 @@ resource "null_resource" "nginx" {
     }
 provisioner "remote-exec" {
     connection  {
+            type    = "ssh"
             host    = aws_instance.myinstance.id
             user = "centos"
             password   = var.password
