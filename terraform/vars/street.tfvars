@@ -1,1 +1,3 @@
-House = "#824"
+variable "House" {
+    default = "#824"    
+}
