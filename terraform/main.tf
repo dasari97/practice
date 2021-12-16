@@ -44,7 +44,9 @@ resource "aws_security_group" "my-sg" {
   }
 }
 
-variable "password" {}
+variable "password" {
+    default = "DevOps321"
+}
 
 resource "null_resource" "nginx" {
 
