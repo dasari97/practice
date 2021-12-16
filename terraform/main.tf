@@ -60,5 +60,3 @@ provisioner "remote-exec" {
 
     }
 }
-
-}
