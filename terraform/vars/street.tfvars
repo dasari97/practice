@@ -1,3 +1,1 @@
-variable "House" {
-    default = "#824"  
-}
+House = "#824"
