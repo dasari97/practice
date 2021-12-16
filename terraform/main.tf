@@ -50,7 +50,7 @@ resource "null_resource" "nginx" {
         a = timestamp()
     }
 provisioner "remote-exec" {
-    connection = {
+    connection  {
             host    = aws_instance.myinstance.ip
             user = centos
             password    = vars.password
