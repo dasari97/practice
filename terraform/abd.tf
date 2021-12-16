@@ -5,6 +5,4 @@ variable "Street" {
     default = "AECS B Block"  
 }
 
-variable "House" {
-    default = null    
-}
+variable "House" {}
