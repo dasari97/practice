@@ -87,3 +87,10 @@ provisioner "remote-exec" {
   }
 }
 
+output "Name" {
+    value = var.name
+}
+
+output "Age" {
+    value = var.Age  
+}
