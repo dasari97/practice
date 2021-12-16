@@ -14,7 +14,6 @@ resource "aws_instance" "myinstance" {
     ami = "ami-0760b951ddb0c20c9"
     instance_type = "t2.micro"
     vpc_security_group_ids  = [aws_security_group.my-sg.id]
-    wait_for_fulfillment   = true
 
     tags = {
         Name = "myinstance"
