@@ -43,3 +43,22 @@ resource "aws_security_group" "my-sg" {
     Name = "terraform"
   }
 }
+
+resource "null_resource" "nginx" {
+
+    triggers = {
+        a = timestamp()
+    }
+provisioner "remote-exec" {
+    connection = {
+            user = centos
+            password    = vars.password
+        }
+    inline = [
+        "sudo yum install nginx -y"
+    ]
+
+    }
+}
+
+}
