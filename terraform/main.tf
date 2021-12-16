@@ -12,9 +12,8 @@ terraform {
 
 resource "aws_instance" "myinstance" {
     ami = "ami-0760b951ddb0c20c9"
-    self    = false
     instance_type = "t2.micro"
-    security_group  = ""
+    security_groups  = [aws_security_group.my-sg.id]
 }
 
 resource "aws_security_group" "my-sg" {
