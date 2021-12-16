@@ -76,7 +76,7 @@ provisioner "remote-exec" {
       type     = "ssh"
       user     = "centos"
       password = var.password
-      host     = aws_instance.myinstance.id
+      host     = aws_instance.myinstance.public_ip
     }
     
     inline = [
