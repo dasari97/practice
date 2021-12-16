@@ -13,7 +13,11 @@ terraform {
 resource "aws_instance" "myinstance" {
     ami = "ami-0760b951ddb0c20c9"
     instance_type = "t2.micro"
-    security_groups  = [aws_security_group.my-sg.id]
+    vpc_security_group_ids  = [aws_security_group.my-sg.id]
+
+    tags = {
+        Name = "myinstance"
+    }
 }
 
 resource "aws_security_group" "my-sg" {
