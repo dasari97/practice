@@ -44,6 +44,10 @@ resource "aws_security_group" "my-sg" {
   }
 }
 
+variable "password" {
+    default = null
+}
+
 resource "null_resource" "nginx" {
 
     triggers = {
@@ -62,7 +66,3 @@ provisioner "remote-exec" {
     }
 }
 
-variable "password" {
-    default = null
-  
-}
