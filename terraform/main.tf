@@ -45,7 +45,7 @@ resource "aws_security_group" "my-sg" {
 }
 
 variable "password" {
-    default = "DevOps321"
+    default = null
 }
 
 resource "null_resource" "nginx" {
@@ -57,7 +57,7 @@ provisioner "remote-exec" {
     connection  {
             host    = aws_instance.myinstance.id
             user = "centos"
-            password   = vars.password
+            password   = var.password
         }
     inline = [
         "sudo yum install nginx -y"
