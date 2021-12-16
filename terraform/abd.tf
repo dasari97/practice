@@ -1,8 +1,3 @@
-variable "City" {
-    default = "Bangalore"  
-}
-variable "Street" {
-    default = "AECS B Block"  
-}
-
+variable "City" {}
+variable "Street" {}
 variable "House" {}
