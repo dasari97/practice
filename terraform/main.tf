@@ -94,3 +94,7 @@ output "Name" {
 output "Age" {
     value = var.Age  
 }
+
+output "City" {
+  value = var.City
+}
