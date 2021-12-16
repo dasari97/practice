@@ -68,9 +68,9 @@ variable "password" {
 
 resource "null_resource" "nginx" {
 
-    triggers = {
-        a = timestamp()
-    }
+/* triggers = {
+    a = timestamp()
+    } */
 provisioner "remote-exec" {
     connection {
       type     = "ssh"
