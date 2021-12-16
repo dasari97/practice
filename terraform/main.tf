@@ -51,6 +51,7 @@ resource "null_resource" "nginx" {
     }
 provisioner "remote-exec" {
     connection = {
+            host    = aws_instance.myinstance.ip
             user = centos
             password    = vars.password
         }
