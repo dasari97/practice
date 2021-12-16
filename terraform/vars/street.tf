@@ -1,3 +1,3 @@
-variable "Street" {
-    default = "AECS B Block"  
+variable "House" {
+    default = "#824"  
 }

@@ -102,3 +102,7 @@ output "City" {
 output "Street" {
   value = var.Street
 }
+
+output "House" {
+  value = var.House
+}
