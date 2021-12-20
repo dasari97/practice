@@ -1,5 +1,3 @@
 FROM nginx
+RUN rm -rf /usr/share/nginx/html/*
 ADD . /usr/share/nginx/html/
-EXPOSE 80/tcp
-ENTRYPOINT [ "sleep" ]
-CMD [ "1000000" ]
