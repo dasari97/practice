@@ -1,4 +1,3 @@
-FROM    nginx
-LABEL   Tool="Docker" \
-        Name="sai"
-EXPOSE  8080
+FROM nginx
+ADD . /usr/share/nginx/html/
+EXPOSE 80/tcp
