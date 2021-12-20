@@ -1,7 +1,7 @@
 {
-    "title": "One Page Wonder",
-    "name": "startbootstrap-one-page-wonder",
-    "version": "6.0.4",
+    "title": "Grayscale",
+    "name": "startbootstrap-grayscale",
+    "version": "7.0.4",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -12,7 +12,7 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "A one page HTML template built with Bootstrap",
+    "description": "A grayscale one page HTML theme for Bootstrap.",
     "keywords": [
         "css",
         "sass",
@@ -21,9 +21,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/one-page-wonder",
+    "homepage": "https://startbootstrap.com/theme/grayscale",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-one-page-wonder/issues",
+        "url": "https://github.com/StartBootstrap/startbootstrap-grayscale/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -33,7 +33,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-one-page-wonder.git"
+        "url": "https://github.com/StartBootstrap/startbootstrap-grayscale.git"
     },
     "dependencies": {
         "bootstrap": "5.1.3"
