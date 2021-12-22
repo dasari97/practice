@@ -1,8 +1,6 @@
 FROM node
 WORKDIR /app
-ADD . .
+ADD package*.json ./
 RUN npm install
-ENTRYPOINT [ "node" ]
-CMD [ "index.js" ]
-
-
+ADD . .
+ENTRYPOINT [ "node" , "index.js"]
