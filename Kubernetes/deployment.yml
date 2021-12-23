@@ -1,0 +1,19 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: mongodb-delpoy
+  labels:
+    app: mongodb
+spec:
+  replicas: 1
+  selector:
+    matchlabels: 
+      app: mongodb
+  templates:
+    metadata: 
+      labels: 
+        app: mongodb
+    spec:
+      conatiners: 
+      - name: mongodb
+        image: mongo
