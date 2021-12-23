@@ -65,6 +65,6 @@ spec:
               key: mg-root-password
         - name: ME_CONFIG_MONGODB_SERVER
           valueFrom: 
-            ConfigmapKeyRef:
+            ConfigMapKeyRef:
               name: mongodb-configmap
               key: database-url
