@@ -25,11 +25,6 @@ spec:
             secretKeyRef:
               name: mongodb-secret1
               key: username
-        - name: ME_CONFIG_MONGODB_ADMINPASSWORD
-          valueFrom: 
-            secretKeyRef:
-              name: mongodb-secret1
-              key: password
         - name: ME_CONFIG_MONGODB_SERVER
           valueFrom: 
             configMapKeyRef:
