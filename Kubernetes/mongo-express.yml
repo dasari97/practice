@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mongodb-express
   labels: 
-    app: mongodb-3
+    app: mongodb-express
 spec: 
   replicas: 1
   selector:
