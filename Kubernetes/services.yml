@@ -6,7 +6,7 @@ metadata:
     app: mongodb-2
 spec:
   selector: 
-    app: mongodb-1
+    app: mongodb
   ports:
     - protocol: TCP
       port: 27017
