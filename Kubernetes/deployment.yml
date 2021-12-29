@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mongodb-delpoy
   labels:
-    app: mongodb-1
+    app: mongodb
 spec:
   replicas: 2
   selector:
