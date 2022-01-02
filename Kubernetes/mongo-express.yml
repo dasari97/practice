@@ -47,28 +47,9 @@ metadata:
 spec:
   selector: 
     app: express
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - protocol: TCP
       port: 8081
       targetPort: 8081
 
----
-
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata: 
-  name: mongodb-internal-servcies
-  namespace: practice
-spec:
-  rules:
-  - host: qwertfdsa.com
-    http:
-      paths:
-        - path: "/"
-          pathType: Prefix
-          backend:
-            service:
-              name: mongodb-servcies
-              port:
-                number: 8081
