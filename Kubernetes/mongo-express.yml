@@ -66,5 +66,7 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: mongodb-servcies
-          servicePort: 8081
+          service:
+            name: mongodb-servcies
+          port:
+            number: 8081
