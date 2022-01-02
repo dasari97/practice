@@ -65,8 +65,10 @@ spec:
   - host: practice.com
     http:
       paths:
-      - backend:
-          service:
-            name: mongodb-servcies
-          port:
-            number: 8081
+        - path:
+          pathType: prefix
+          backend:
+            service:
+              name: mongodb-servcies
+            port:
+              number: 8081
