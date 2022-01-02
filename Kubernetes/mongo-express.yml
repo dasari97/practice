@@ -65,7 +65,7 @@ spec:
   - host: practice.com
     http:
       paths:
-        - path:
+        - path: "/"
           pathType: Prefix
           backend:
             service:
