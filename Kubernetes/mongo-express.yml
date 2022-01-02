@@ -42,14 +42,29 @@ spec:
 apiVersion: v1
 kind: Service
 metadata: 
-  name: mongodb-express-servcies
+  name: mongodb-servcies
   namespace: practice
 spec:
   selector: 
     app: express
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - protocol: TCP
       port: 8081
       targetPort: 8081
-      nodePort: 30000
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata: 
+  name: mongodb-internal-servcies
+  namespace: practice
+spec:
+  rules:
+  - host: practice.com
+    http:
+      paths:
+      - backend:
+          serviceName: mongodb-servcies
+          servicePort: 8081
