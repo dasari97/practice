@@ -62,7 +62,7 @@ metadata:
   namespace: practice
 spec:
   rules:
-  - host: practice.com
+  - host: qwertfdsa.com
     http:
       paths:
         - path: "/"
